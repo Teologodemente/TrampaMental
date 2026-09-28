@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0f0f1e">
+  <title>Trampa Mental ⚡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game" id="game">
+
+    <!-- PANTALLA: INICIO -->
+    <section class="screen active" id="screen-start">
+      <div class="logo">
+        <span class="logo-bolt">⚡</span>
+        <h1>Trampa Mental</h1>
+        <p class="subtitle">¡El juego que engaña a tu cerebro!</p>
+      </div>
+
+      <div class="how-to">
+        <p><b>1.</b> Lee la instrucción y toca rápido</p>
+        <p><b>2.</b> Cada 400 pts sube el nivel ⚡</p>
+        <p><b>3.</b> Suben las celdas y baja el tiempo</p>
+        <p><b>4.</b> Las letras y celdas te confunden 😵</p>
+      </div>
+
+      <button class="btn btn-play" id="btn-play">▶ JUGAR</button>
+
+      <div class="best">🏆 Récord: <span id="best-start">0</span></div>
+    </section>
+
+    <!-- PANTALLA: JUEGO -->
+    <section class="screen" id="screen-game">
+      <div class="top-controls">
+        <button class="icon-btn" id="btn-pause" title="Pausar">⏸</button>
+        <button class="icon-btn" id="btn-restart" title="Reiniciar">🔄</button>
+      </div>
+
+      <div class="hud">
+        <div class="hud-item">🏆 <span id="best-score">0</span></div>
+        <div class="hud-item big">⭐ <span id="score">0</span></div>
+        <div class="hud-item">⏱️ <span id="time">30</span></div>
+        <div class="hud-item">⚡ <span id="level">1</span></div>
+      </div>
+
+      <div class="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
+
+      <div class="prompt" id="prompt">¿Estás listo?</div>
+
+      <div class="grid" id="grid"></div>
+
+      <div class="combo" id="combo"></div>
+    </section>
+
+    <!-- PANTALLA: FIN -->
+    <section class="screen" id="screen-over">
+      <div class="over-title">⏰ ¡Tiempo!</div>
+      <div class="final-score"><span id="final-score">0</span></div>
+      <div class="final-label">puntos</div>
+      <div class="stats">
+        <div class="stat">✅ Aciertos: <span id="hits">0</span></div>
+        <div class="stat">🔥 Mejor racha: <span id="best-combo">0</span></div>
+        <div class="stat">🏆 Récord: <span id="best-final">0</span></div>
+      </div>
+      <div class="new-record hidden" id="new-record">🎉 ¡NUEVO RÉCORD!</div>
+      <button class="btn btn-play" id="btn-retry">🔄 OTRA VEZ</button>
+      <button class="btn btn-home" id="btn-home">🏠 Menú</button>
+    </section>
+
+    <!-- PANTALLA: PAUSA -->
+    <section class="screen" id="screen-pause">
+      <div class="over-title">⏸ PAUSA</div>
+      <button class="btn btn-play" id="btn-resume">▶ CONTINUAR</button>
+      <button class="btn btn-restart-big" id="btn-restart-2">🔄 REINICIAR</button>
+      <button class="btn btn-home" id="btn-home-2">🏠 Menú</button>
+    </section>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
